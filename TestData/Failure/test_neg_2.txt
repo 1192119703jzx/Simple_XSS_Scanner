@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webpage</title>
+    <script>
+        function renderAndHandleButtonClick() {
+            let input = document.getElementById('urlInput').value;
+        let domainRe = /^https?:\/\/www\.segmentfault\.com/
+        let result;
+
+        if (domainRe.test(input)) {
+                result = `<script src="${input}"></script>`;
+        } else {
+        result = 'Invalid URL';
+        }
+
+    document.getElementById('result').innerHTML = result;
+}
+    </script>
+</head>
+<body>
+    <h1>Your input:</h1>
+    <input type="text" id="userInput">
+    <button onclick="sanitizeInput()">Submit</button>
+    <p id="result"></p>
+</body>
+</html>

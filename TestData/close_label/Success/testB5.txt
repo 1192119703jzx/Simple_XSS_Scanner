@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webpage</title>
+    <script>
+        function sanitizeInput() {
+            let input = document.getElementById('userInput').value;
+            let src = input.replace(/<\/style>/ig, '/* \u574F\u4EBA */')
+	    let renderedInput = '<style>' + src + '</style>';
+            document.getElementById('content').innerHTML = renderedInput;
+        }
+    </script>
+</head>
+<body>
+    <h1>Your input:</h1>
+    <input type="text" id="userInput" placeholder="Enter CSS rules here">
+    <button onclick="sanitizeInput()">Submit</button>
+    <p id="content"></p>
+</body>
+</html>

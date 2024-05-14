@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webpage</title>
+    <script>
+        function executeFunction() {
+            let userInput = document.getElementById('userInput').value;
+            let element = document.getElementById('message');
+            element.innerText = userInput;
+            try {
+                eval(element.innerText);
+            } catch (error) {
+                console.error("Error executing function: ", error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="userInput" placeholder="Enter JavaScript code here">
+    <button onclick="executeFunction()">Execute Code</button>
+    <p id="message"></p>
+</body>
+</html>

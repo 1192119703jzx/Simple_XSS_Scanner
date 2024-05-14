@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webpage</title>
+    <script>
+        function displayInput() {
+            let input = document.getElementById('userInput').value;
+            let renderedInput = '<!-- ' + input + ' -->';
+            document.getElementById('content').innerHTML = renderedInput;
+        }
+    </script>
+</head>
+<body>
+    <h1>Your input:</h1>
+    <input type="text" id="userInput">
+    <button onclick="displayInput()">Submit</button>
+    <div id="content"></div>
+</body>
+</html>

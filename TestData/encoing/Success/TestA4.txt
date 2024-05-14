@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webpage</title>
+    <script>
+        function sanitizeInput() {
+            let input = document.getElementById('userInput').value;
+            let sanitizedInput = input.toUpperCase();
+            let sanitizedInput = input.replace(/script/ig, '');
+            document.getElementById('content').innerHTML = sanitizedInput;
+        }
+    </script>
+</head>
+<body>
+    <h1>Your input:</h1>
+    <input type="text" id="userInput">
+    <button onclick="sanitizeInput()">Submit</button>
+    <p id="content"></p>
+</body>
+</html>

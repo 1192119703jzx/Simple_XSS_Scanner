@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Search Results</h2>
+
+<p id="searchResults"></p>
+
+<script>
+// Get the search query from the URL
+var params = new URLSearchParams(window.location.search);
+var query = params.get('q');
+
+// Display the search query
+document.getElementById('searchResults').innerHTML = 'You searched for: ' + query;
+</script>
+
+</body>
+</html>
