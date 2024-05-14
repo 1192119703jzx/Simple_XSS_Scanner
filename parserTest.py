@@ -116,15 +116,18 @@ def replace_analysis(regex, pattern, flags, upper):
     dict = set(element) - {'[', ']', '(', ')', '`', 'on.*=', 'auto', 'script'}
     if dict and dict != {None}:
         print(f'Your input sanitization contains characters/signs/strings {dict} which cannot be analyzed with this scanner. '
-              f'You should use other code scaner to refine your code.')
+              f'You should use another code scanner to refine your code.')
         print()
     temp_pay = Payloads.find_pl(element, flags, upper)
     return temp_pay
 
 
-'''main'''
+'''main function starts from here'''
 
-with open('book.txt') as file:
+'''Replace the file path with the one for your target code file'''
+file_path = 'filename.txt'
+
+with open(file_path) as file:
     text = file.read()
 
 parser = MyHTMLParser()
