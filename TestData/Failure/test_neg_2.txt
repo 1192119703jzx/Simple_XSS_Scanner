@@ -5,7 +5,7 @@
     <script>
         function renderAndHandleButtonClick() {
             let input = document.getElementById('urlInput').value;
-        let domainRe = /^https?:\/\/www\.segmentfault\.com/
+        let domainRe = /^https?:\/\/www\.example\.com/
         let result;
 
         if (domainRe.test(input)) {
